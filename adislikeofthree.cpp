@@ -8,11 +8,11 @@ using namespace std;
 #define dec(i,a,b) for(int i=a;i>b;i--)
 int main()
 {
-    int t,a,j=1;
+    int c,a,j=1;
     cin>>t;
     int arr[1000];
     vector<int> ks;
-    inc(i,0,t)
+    inc(i,0,c)
     {
         cin>>a;
         ks.pb(a);
@@ -26,7 +26,7 @@ int main()
         }
         j++;
     }
-    inc(i,0,t){
+    inc(i,0,c){
         cout<<arr[ks[i]-1]<<endl;
     }
     return 0;
