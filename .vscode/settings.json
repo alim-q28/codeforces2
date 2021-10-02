@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.gradle": "dart",
+        "random": "cpp"
+    }
+}
