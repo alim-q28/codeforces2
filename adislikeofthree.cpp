@@ -17,12 +17,12 @@ int main()
         cin>>a;
         ks.pb(a);
     }
-    int k=0;
-    while(k<1000){
+    int k=1000;
+    while(k>0){
         if((j%3 != 0) && (j%10 !=3))
         {
             arr[k]=j;
-            k++;
+            k--;
         }
         j++;
     }
