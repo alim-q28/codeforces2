@@ -150,9 +150,9 @@ fraction fraction::operator/(const fraction &f)
 
 istream &operator>>(istream &in, fraction &f)
 {
-    cout << "Enter numerator : ";
+    cout << "Enter the numerator : ";
     in >> f.num;
-    cout << "Enter denominator : ";
+    cout << "Enter the denominator : ";
     int a;
     in >> a;
     if (a != 0)
