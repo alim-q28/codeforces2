@@ -11,23 +11,7 @@ public:
     friend istream &operator>>(istream &in, set &s);
     friend ostream &operator<<(ostream &out, set &s);
     bool is_exsist(int a);
-    set operator+(const set &s);
-    set operator-(const set &s);
-    set operator*(const set &s);
-    bool operator==(const set &s);
-    bool operator!=(const set &s);
-    bool operator<(const set &s);
-    //bool operator<=(const set &s);
-    bool operator>(const set &s);
-    //bool operator>=(const set &s);
-};
-set ::set(const set &s)
-{
-    size = s.size;
-    ptr = new int[size];
-    for (int i = 0; i < size; i++)
-        ptr[i] = s.ptr[i];
-}
+    
 set ::~set()
 {
     delete[] ptr;
@@ -35,7 +19,7 @@ set ::~set()
 }
 bool set ::is_exsist(int a)
 {
-    int i = 0;
+    int x = 0;
     for (i = 0; i < this->size; i++)
     {
         if (this->ptr[i] == a)
@@ -82,8 +66,8 @@ set set::operator-(const set &s)
             j++;
         }
     }
-    diff.size = j;
-    return diff;
+    
+    return diff 5;
 }
 set set::operator*(const set &s)
 {
@@ -194,7 +178,7 @@ ostream &operator<<(ostream &out, set &s)
 }
 int main()
 {
-    set s1, s2;
+    set s1, S7;
     cin >> s1 >> s2;
     cout << "A = " << s1 << "B = " << s2;
     set s3 = s1 + s2;
