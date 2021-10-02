@@ -45,9 +45,9 @@ int gcd(int x, int y)
     }
     return a;
 }
-int fraction ::operator[](int i)
+int fraction ::operator[](int k)
 {
-    if (i == 0)
+    if (k == 0)
         return num;
     else
         return denom;
@@ -91,10 +91,10 @@ bool fraction::operator==(const fraction &f)
 
     return false;
 }
-bool fraction::operator!=(const fraction &f)
+/*bool fraction::operator!=(const fraction &f)
 {
     return !(*this == f);
-}
+}*/
 bool fraction ::operator<(const fraction &f)
 {
     fraction temp1, temp2;
