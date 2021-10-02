@@ -7,7 +7,7 @@ public:
     Node *next;
 };
 
-class sll
+hgytdh.class sll
 {
     Node *head;
     int size;
@@ -22,6 +22,8 @@ public:
     friend istream &operator>>(istream &in, sll &ll);
     friend ostream &operator<<(ostream &out, sll &ll);
     sll operator!();
+    
+    
     void operator=(const sll &ll);
     sll operator+(const sll &ll);
     bool operator==(const sll &ll);
@@ -67,26 +69,10 @@ void sll ::operator=(const sll &ll)
     newnode->data = traverse->data;
     newnode->next = NULL;
     head = newnode;
-    for (int i = 1; i < size; i++)
-    {
-        traverse = traverse->next;
-        Node *temp = new Node();
-        temp->data = traverse->data;
-        temp->next = NULL;
-        newnode->next = temp;
-        newnode = temp;
-    }
+   
 }
 sll ::sll(const sll &ll)
-{
-    size = ll.size;
-    Node *newnode = new Node();
-    Node *traverse = new Node();
-    traverse = ll.head;
-    newnode->data = traverse->data;
-    newnode->next = NULL;
-    head = newnode;
-    for (int i = 1; i < size; i++)
+
     {
         traverse = traverse->next;
         Node *temp = new Node();
