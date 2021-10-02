@@ -23,8 +23,8 @@ public:
     {
         cout << "calculating adminofficer's salary" << endl;
         inc = 0.01 * bs;
-        grossinc = inc * (exp1 / 2);
-        salary = bs + grossinc;
+        //grossinc = inc * (exp1 / 2);
+        //salary = bs + grossinc;
         cout << "adminofficer's salary is " << salary << endl;
     }
 };
