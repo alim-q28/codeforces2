@@ -12,7 +12,7 @@ int main()
     cin>>t;
     int arr[1000];
     vector<int> ks;
-    inc(i,0,c)
+    inc(i,1,c+1)
     {
         cin>>a;
         ks.pb(a);
@@ -26,7 +26,7 @@ int main()
         }
         j++;
     }
-    inc(i,0,c){
+    inc(i,1,c+1){
         cout<<arr[ks[i]-1]<<endl;
     }
     return 0;
