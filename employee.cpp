@@ -6,13 +6,13 @@ public:
     int salary, bs, exp1, exp2, exp3, inc, grossinc;
     void calcsalary()
     {
-        cout << "enter basic salary of employee" << endl;
+        cout << "enter the basic salary of employee" << endl;
         cin >> bs;
-        cout << "enter experience of adminofficer" << endl;
+        cout << "enter the experience of adminofficer" << endl;
         cin >> exp1;
-        cout << "enter experience of faculty" << endl;
+        cout << "enter the experience of faculty" << endl;
         cin >> exp2;
-        cout << "enter experience of dean" << endl;
+        cout << "enter the experience of dean" << endl;
         cin >> exp3;
     }
 };
