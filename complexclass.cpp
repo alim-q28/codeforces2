@@ -12,7 +12,7 @@ public:
     void operator=(const complex &c);
     bool operator==(const complex &c);
     bool operator!=(const complex &c);
-    complex operator!();
+   // complex operator!();
     complex operator+(const complex &c);
     complex operator-(const complex &c);
     complex operator*(const complex &c);
