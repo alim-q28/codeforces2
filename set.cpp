@@ -5,7 +5,7 @@ class set
     int *ptr, size;
 
 public:
-    set(const set &s); //copy constructor
+    set(const set &s); //copy this constructor
     set() {}
     ~set(); //destructor
     friend istream &operator>>(istream &in, set &s);
@@ -145,11 +145,11 @@ bool set::operator>=(const set &s)
 istream &operator>>(istream &in, set &s)
 {
     int temps, a, i, j = 0;
-    cout << "Enter the number of elements: ";
+    cout << "Enter the number of element(s): ";
     in >> temps;
     s.ptr = new int[temps];
     s.size = temps;
-    cout << "Enter the values: ";
+    cout << "Enter the value(s): ";
     for (i = 0; i < temps; i++)
     {
         in >> a;
