@@ -23,10 +23,10 @@ public:
         if(this->size == this->capacity)
         {
             capacity *= 2 ;
-            int *a = new int[capacity] ;
+            int *a = new int[capacity];
             for(int i=0;i<this->size;i++)
                 a[i+1] = this->a[i] ;
-            //delete this->[]a ;
+            //delete this array -> []a ;
             this->a = a ;
             delete a ;
             this->a[0] = element ;
