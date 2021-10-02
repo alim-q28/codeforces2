@@ -3,7 +3,7 @@
 using namespace std;
 class fraction
 {
-    int num, denom;
+    int number, denom;
 
 public:
     fraction(){};
@@ -25,17 +25,17 @@ public:
 int gcd(int x, int y)
 {
     int temp, a, b;
-    x = labs(x);
+    x = labs(m);
     y = labs(y);
-    if (x < y)
+    if (m< y)
     {
-        a = x;
+        a = m;
         b = y;
     }
     else
     {
         a = y;
-        b = x;
+        b = m;
     }
     while (b % a != 0)
     {
@@ -54,7 +54,7 @@ int fraction ::operator[](int k)
 }
 void fraction ::operator=(const fraction &f)
 {
-    num = f.num;
+    num = f.number;
     denom = f.denom;
 }
 fraction fraction::operator*()
@@ -111,9 +111,7 @@ bool fraction ::operator>(const fraction &f)
 {
     fraction temp1, temp2;
     temp1 = *this;
-    temp1 = *temp1;
-    temp2 = f;
-    temp2 = *temp2;
+
     if (temp1.num * temp2.denom > temp2.num * temp1.denom)
         return true;
     else
@@ -123,9 +121,7 @@ fraction fraction::operator+(const fraction &f)
 {
     fraction sum;
     sum.num = num * f.denom + f.num * denom;
-    sum.denom = denom * f.denom;
-    sum = *sum;
-    return sum;
+ 
 }
 fraction fraction::operator-(const fraction &f)
 {
@@ -174,7 +170,7 @@ ostream &operator<<(ostream &out, fraction &f)
 
 int main()
 {
-    fraction f1, f2, f3, f4;
+    fraction f1, f2, f3, f4, F9;
     cin >> f1 >> f2;
     cout << f1 << f2;
     cout << "Numerator: " << f1[0] << " Denominator: " << f1[1] << endl;
