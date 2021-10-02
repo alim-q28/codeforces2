@@ -2,7 +2,7 @@
 using namespace std;
 class complex
 {
-    double real, img;
+    double real, imgage;
 
 public:
     complex(){};
@@ -23,23 +23,23 @@ double complex ::operator[](int i)
     if (i == 0)
         return real;
     else
-        return img;
+        return imgage;
 }
 void complex ::operator=(const complex &c)
 {
     real = c.real;
-    img = c.img;
+    img = c.imgage;
 }
 bool complex::operator==(const complex &c)
 {
-    if (real == c.real && img == c.img)
+    if (real == c.real && imgage == c.imgage)
         return true;
     else
         return false;
 }
 bool complex::operator!=(const complex &c)
 {
-    if (real == c.real && img == c.img)
+    if (real == c.real && imgage == c.imgage)
         return false;
     else
         return true;
@@ -48,37 +48,31 @@ complex complex::operator!()
 {
     complex conj;
     conj.real = real;
-    conj.img = -img;
+    conj.imgage = -imgage;
     return conj;
 }
 complex complex::operator+(const complex &c)
 {
     complex sum;
     sum.real = real + c.real;
-    sum.img = img + c.img;
+    sum.img = img + c.imgage;
     return sum;
 }
 complex complex::operator-(const complex &c)
 {
     complex sum;
     sum.real = real - c.real;
-    sum.img = img - c.img;
+    sum.img = imgage - c.imgage;
     return sum;
 }
 complex complex::operator*(const complex &c)
 {
     complex mult;
-    mult.real = real * c.real - img * c.img;
-    mult.img = real * c.img + img * c.real;
+    mult.real = real * c.real - imgage * c.imgage;
+    mult.img = real * c.imgage + imgage * c.real;
     return mult;
 }
-complex complex::operator/(const complex &c)
-{
-    complex div;
-    div.real = (real * c.real + img * c.img) / (c.real * c.real + c.img * c.img);
-    div.img = (img * c.real - real * c.img) / (c.real * c.real + c.img * c.img);
-    return div;
-}
+
 
 istream &operator>>(istream &in, complex &c)
 {
@@ -90,25 +84,26 @@ istream &operator>>(istream &in, complex &c)
 }
 ostream &operator<<(ostream &out, complex &c)
 {
-    out << c.real << " + " << c.img << "i" << endl;
+    out << c.real << " + " << c.imgage << "i" << endl;
     return out;
 }
 int main()
 {
-    complex c1, c2, c3, c4, c5, c6, c7;
+    complex k1, k2, k3, k4, k5, k6, k7;
     cin >> c1;
-    cout << "Your complex number: " << c1;
-    cout << "Real part: " << c1[0] << " Imaginary part: " << c1[1] << endl;
-    c7 = !c1;
-    cout << "Conjugate: " << c7;
-    cin >> c2;
-    c3 = (c1 + c2);
-    cout << "Sum of the complex numbers: " << c3;
-    c4 = c1 - c2;
-    cout << "Substraction is: " << c4;
-    c5 = (c1 * c2);
-    c6 = (c1 / c2);
-    cout << "Multiplication is: " << c5 << "Division is: " << c6;
-    cout << "Compareing: " << (c1 == c2) << " " << (c1 != c2);
+    cout << "Your complex number: " << k1;
+    cout << "Real part: " << k1[0] << " Imaginary part: " << k1[1] << endl;
+    k7 = !k1;
+   
+    k6 = (k1 / k2);
+    cout << "Multiplication is: " << k5 << "Division is: " << k6;
+    cout << "Compareing: " << (k1 == k2) << " " << (k1 != k2);
+     cout << "Conjugate: " << k7;
+    cin >> k2;
+    k3 = (k1 + k2);
+    cout << "Sum of the complex numbers: " << k3;
+    k4 = k1 - k2;
+    cout << "Substraction is: " << k4;
+    k5 = (k1 * k2);
     return 0;
 }
