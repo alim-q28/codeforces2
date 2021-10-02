@@ -16,7 +16,7 @@ public:
     set operator*(const set &s);
     bool operator==(const set &s);
     bool operator!=(const set &s);
-    bool operator<(const set &s);
+    //bool operator<(const set &s);
     bool operator<=(const set &s);
     bool operator>(const set &s);
     bool operator>=(const set &s);
