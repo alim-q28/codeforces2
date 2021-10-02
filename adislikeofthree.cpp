@@ -8,26 +8,32 @@ using namespace std;
 #define dec(i,a,b) for(int i=a;i>b;i--)
 int main()
 {
-    int c,a,j=1;
+    int t;
     cin>>t;
-    int arr[1000];
-    vector<int> ks;
-    inc(i,0,c)
-    {
-        cin>>a;
-        ks.pb(a);
-    }
-    int k=0;
-    while(k<1000){
-        if((j%3 != 0) && (j%10 !=3))
-        {
-            arr[k]=j;
-            k++;
+
+    while(t--) {
+        int k;
+        cin>>k;
+
+        int i = 1;
+
+        while(true) {
+            if(i%3==0 || (i%10==3)) {
+                i++;
+                continue;
+            }
+
+            else {
+                --k;
+
+                if(k==0)
+                {
+                    cout<<i<<"\n";
+                    break;
+                }
+                i++;
+            }
         }
-        j++;
-    }
-    inc(i,0,c){
-        cout<<arr[ks[i]-1]<<endl;
     }
     return 0;
 }
