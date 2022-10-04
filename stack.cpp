@@ -34,7 +34,7 @@ public:
     {
         if (s > size)
         {
-            printf("\nError number of elements greater than stack size\n");
+            printf("\nError: Number of elements greater than stack size\n");
             return;
         }
         cout << "Enter the elements:" << endl;
