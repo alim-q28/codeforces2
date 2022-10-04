@@ -171,8 +171,8 @@ int main()
     cout << "Concatenating two lists we get : " << endl
          << ll4;
     cout << "Comparing List 1 equal to List 2: " << (ll1 == ll2) << endl;
-    cout << "Enter the subscript for finding a value in List 1: ";
+    cout << "Enter the position for finding a value in List 1: ";
     cin >> i;
-    cout << "The value at subscript " << i << " is : " << ll1[i] << endl;
+    cout << "The value at the subscript " << i << " is : " << ll1[i] << endl;
     return 0;
 }
