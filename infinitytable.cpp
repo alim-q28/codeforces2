@@ -15,7 +15,7 @@ int main()
         cin>>k;
         x.push_back(k);
     }
-    inc(i,0,q){
+    for(int i=0;i<q;i++){
         if(sqrt(x[i]) == int(sqrt(x[i]))){
             cout<<int(sqrt(x[i]))<<" "<<1<<endl;
         }
