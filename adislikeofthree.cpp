@@ -26,7 +26,7 @@ int main()
         }
         j++;
     }
-    inc(i,1,c+1){
+    for(int i=1;i<c+1;i++){
         cout<<arr[ks[i]-1]<<endl;
     }
     return 0;
