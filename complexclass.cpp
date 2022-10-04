@@ -92,7 +92,7 @@ int main()
     complex k1, k2, k3, k4, k5, k6, k7;
     cin >> c1;
     cout << "Your complex number: " << k1;
-    cout << "Real part: " << k1[0] << " Imaginary part: " << k1[1] << endl;
+    cout << "Real part: " << k1[0] << " Img part: " << k1[1] << endl;
     k7 = !k1;
    
     k6 = (k1 / k2);
