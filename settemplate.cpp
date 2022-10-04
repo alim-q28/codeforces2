@@ -230,7 +230,7 @@ int main()
     set<float> s4 = s1 - s2;
     cout << "A - B =" << s4;
     set<float> s5 = s1 * s2;
-    cout << "A intersection B = " << s5;
+    cout << "A intersect B = " << s5;
     cout << "Subset , Superset testing: " << endl;
     cout << "A is proper-subset of B , A is subset of B ,";
     cout << "A is proper-superset of B , A is superset of B: " << endl;
