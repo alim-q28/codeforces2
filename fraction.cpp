@@ -173,7 +173,7 @@ int main()
     fraction f1, f2, f3, f4, F9;
     cin >> f1 >> f2;
     cout << f1 << f2;
-    cout << "Numerator: " << f1[0] << " Denominator: " << f1[1] << endl;
+    cout << "Numerator is: " << f1[0] << " Denominator is: " << f1[1] << endl;
     f3 = (f1 + f2);
     f4 = f1 - f2;
     cout << "Sum: " << f3 << "Sub: " << f4;
