@@ -20,7 +20,7 @@ int main()
     inc(i,0,m){
         alternate.insert(value-a[i]);
     }
-    inc(i,0,n){
+    for(int i;i<n;i++){
         if(alternate.count(b[i])){
             cout<<"Found!!!"<<endl;
             return 0;
