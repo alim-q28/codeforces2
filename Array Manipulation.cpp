@@ -8,9 +8,9 @@ int main(){
     long int *arr=new long int[n+1]();
 while (m--)
 {
-    int a,c,k;
+    int b,c,k;
     cin>>a>>c>>k;
-        arr[a] += k;
+        arr[b] += k;
         if(c <n ){
             arr[c+1] -= k;
         }
