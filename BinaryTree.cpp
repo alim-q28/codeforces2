@@ -28,7 +28,7 @@ treeNode<int>* takeInput()
 	int d;
 	cout<<"Enter Data: "<<endl;
 	cin>>d;
-	if(d==-1)
+	if(d==1)
 	return NULL;
 	
 	treeNode<int>* root=new treeNode<int>(d);
