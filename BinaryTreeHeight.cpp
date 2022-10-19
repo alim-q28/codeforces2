@@ -19,6 +19,7 @@ class treeNode
 	~treeNode()
 	{
 		delete left;
+		delete front;
 		delete right;
 	}
 };
