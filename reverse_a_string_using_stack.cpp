@@ -35,7 +35,7 @@ cout<<endl;
 
 int main()
 {
-string s="I Am Gaurav";
+string s="I Am Roy";
 reverse(s);
 return 0;
 }
