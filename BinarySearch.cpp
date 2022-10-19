@@ -28,6 +28,7 @@ int BinSearch(int*A,int n,int x)
 int main()
 {
 	int n;
+	int m;
 	cin>>n;
 	int A[n];
 	for(int i=0;i<n;i++)
