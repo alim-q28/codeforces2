@@ -5,12 +5,12 @@ using namespace std;
 
 int main()
 {
-	int n;
+	int a;
 	cin>>n;
-	string A[n];
-	for(int i=0;i<n;i++)
+	string A[a];
+	for(int i=0;i<a;i++)
 	getline(cin,A[i]);
-	for(int i=0;i<n;i++)
+	for(int i=0;i<a;i++)
 	cout<<"A["<<i<<"] = "<<A[i]<<endl;
 	
 	cout<<"first is "<<A[0];	//When size of Array is taken dynamically 
