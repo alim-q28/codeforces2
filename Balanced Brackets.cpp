@@ -94,7 +94,7 @@ int main()
 
     fout.close();
 
-    return 0;
+    return 1;
 }
 
 string ltrim(const string &str) {
