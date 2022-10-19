@@ -8,11 +8,11 @@ int main(){
     long int *arr=new long int[n+1]();
 while (m--)
 {
-    int a,b,k;
-    cin>>a>>b>>k;
+    int a,c,k;
+    cin>>a>>c>>k;
         arr[a] += k;
-        if(b <n ){
-            arr[b+1] -= k;
+        if(c <n ){
+            arr[c+1] -= k;
         }
 }
 long int max = 0; m = 0;
