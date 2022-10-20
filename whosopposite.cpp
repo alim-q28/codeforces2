@@ -32,7 +32,7 @@ int main()
             cout<<arr[i][1]-arr[i][0]/2<<endl;
         }
         else
-        cout<<-1<<endl;
+        cout<<"Cant be done"<<endl;
     }
     return 0;
 }
