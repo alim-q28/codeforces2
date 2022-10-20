@@ -159,8 +159,10 @@ class BST {
 
 
 int main(){
+	// creating the bst
     BST *tree = new BST();
     int choice, input;
+	//running the program
     while(true){
         cin>>choice;
         switch(choice){
