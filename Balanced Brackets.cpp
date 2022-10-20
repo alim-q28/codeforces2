@@ -13,7 +13,7 @@ string rtrim(const string &);
  * The function accepts STRING s as parameter.
  */
 
-string isBalanced(string s) 
+string isBalanced(string ss) 
 {
 int len=s.length();
 string y="YES";
