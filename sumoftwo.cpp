@@ -22,10 +22,10 @@ int main()
     }
     inc(i,0,n){
         if(alternate.count(b[i])){
-            cout<<"Found!!!"<<endl;
+            cout<<"Found"<<endl;
             return 0;
         }
     }
-    cout<<"Not Found!!!"<<endl;
+    cout<<"Not Found"<<endl;
     return 0;
 }
