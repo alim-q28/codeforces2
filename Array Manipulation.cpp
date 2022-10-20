@@ -16,7 +16,7 @@ while (m--)
         }
 }
 long int max = 0; m = 0;
-for(long int i = 0 ; i<= n ; i++){
+for(long int i = 0 ; i<= m ; i++){
     m += arr[i];
     if(m > max) max = m;
 }
