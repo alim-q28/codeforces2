@@ -151,10 +151,10 @@ int main()
          << ll1 << "List 2 is: " << endl
          << ll2;
     ll3 = !ll1;
-    cout << "Reverse of List 1 is: " << endl
+    cout << "Reverse of List1 is: " << endl
          << ll3;
     ll4 = ll1 + ll2;
-    cout << "Concatenating two lists we get : " << endl
+    cout << "Concatenating two lists and we get : " << endl
          << ll4;
     cout << "Comparing List 1 equal to List 2: " << (ll1 == ll2) << endl;
     cout << "Enter the subscript for finding a value in List 1: ";
