@@ -3,7 +3,7 @@ using namespace std;
  
 using ll = long long;
 using db = long double; // or double, if TL is tight
-using str = string; // yay python! 
+using str = string; 
 
 // pairs
 using pi = pair<int,int>;
