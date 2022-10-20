@@ -24,7 +24,6 @@ int subsequence(string input,string output[])
 int main()
 {
 	string input;
-	string caps;
 	cin>>input;					   // Input is a string
 	int n=pow(2,input.size());									 
 	string *output=new string[n];  // Output is a string array 
