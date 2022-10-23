@@ -11,6 +11,7 @@ int BinSearch(int *p,int l,int h,int key)
 		else
 		return 0;
 	}
+	
 	else
 	{
 		if(key==p[mid])
@@ -34,14 +35,18 @@ int main()
 	{
 		cin>>p[i];
 	}
+	
 	int key;
 	cout<<"Enter key ";
 	cin>>key;
+	
 	int c = BinSearch(p,1,n+1,key);
-	if(c==1)
+	
+	if(c==1){
 	cout<<"Search Successfull";
 	else
 	cout<<"Search Unsuccessfull";
+	}
 	
 	return 0;	
 }
