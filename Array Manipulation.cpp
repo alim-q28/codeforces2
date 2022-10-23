@@ -15,11 +15,13 @@ while (m--)
             arr[c+1] -= k;
         }
 }
+   
 long int max = 0; m = 0;
 for(long int i = 0 ; i<= m ; i++){
-    m += arr[i];
+      m += arr[i];
     if(m > max) max = m;
 }
+   
 cout<<max<<endl;
 
 return 0;
