@@ -15,7 +15,7 @@ using pd = pair<db,db>;
 
 #define tcT template<class T
 #define tcTU tcT, class U
-// ^ lol this makes everything look weird but I'll try it
+// ^ lol this makes everything look weird but I'll try it (p2:wtf bruh!)
 tcT> using V = vector<T>; 
 tcT, size_t SZ> using AR = array<T,SZ>; 
 using vi = V<int>;
@@ -84,16 +84,20 @@ tcTU> T fstTrue(T lo, T hi, U f) {
 		T mid = lo+(hi-lo)/2;
 		f(mid) ? hi = mid : lo = mid+1; 
 	} 
+	
 	return lo;
 }
+
 tcTU> T lstTrue(T lo, T hi, U f) {
 	--lo; assert(lo <= hi); // assuming f is decreasing
 	while (lo < hi) { // find first index such that f is true 
 		T mid = lo+(hi-lo+1)/2;
 		f(mid) ? lo = mid : hi = mid-1;
 	} 
+	
 	return lo;
 }
+
 tcT> void remDup(vector<T>& v) { // sort and remove duplicates
 	sort(all(v)); v.erase(unique(all(v)),end(v)); }
 tcTU> void erase(T& t, const U& u) { // don't erase
@@ -186,8 +190,10 @@ inline namespace ToString {
 			if (!fst) res += sep;
 			fst = 0; res += ts(x);
 		}
+		
 		return res;
 	}
+	
 	tcT> typename enable_if<needs_output_v<T>,str>::type ts(T v) {
 		return "{"+ts_sep(v,", ")+"}"; }
 
@@ -203,10 +209,12 @@ inline namespace ToString {
 			vs tmp = ts_lev<lev-1>(t);
 			res.ins(end(res),all(tmp));
 		}
+		
 		F0R(i,sz(res)) {
 			str bef = " "; if (i == 0) bef = "{";
 			res[i] = bef+res[i];
 		}
+		
 		res.bk += "}";
 		return res;
 	}
@@ -269,28 +277,36 @@ tcT, int SZ> struct LazySeg {
 			lazy[i] = 0;
 		} 
 	}
+	
 	void pull(int ind) {
 		seg[ind] = min(seg[2*ind]+lazy[2*ind],seg[2*ind+1]+lazy[2*ind+1]);
 	}
+	
 	void set_at(int pos, T val, int ind=1,int L=0, int R=SZ-1) {
 		if (L == R) {
 			seg[ind] = val;
 			return;
 		}
+		
 		int M = (L+R)/2;
 		if (pos <= M) {
 			set_at(pos,val,2*ind,L,M);
-		} else {
+		}
+		
+		else {
 			set_at(pos,val,2*ind+1,M+1,R);
 		}
+		
 		pull(ind);
 	}
+	
 	void upd(int hi, T inc,int ind=1,int L=0, int R=SZ-1) {
 		if (hi < L) return;
 		if (R <= hi) {
 			lazy[ind] += inc;
 			return;
 		}
+		
 		int M = (L+R)/2;
 		upd(hi,inc,2*ind,L,M); upd(hi,inc,2*ind+1,M+1,R);
 		pull(ind);
@@ -316,6 +332,7 @@ int main() {
 			dist[i][j].s -= dist[i][k].s;
 		}
 	}
+	
 	FOR(i,1,MX) dp[1][i] = (ll)i*(i+1)/2;
 	FOR(k,2,IT) {
 		// auto upd = [&](int hi, int ad) {
@@ -342,9 +359,11 @@ int main() {
 			// dbg("??",sz(cands),cands.bk.f-cands.ft.f+1);
 			// dbg("HA",k,i,dp[k][i],cands);
 		}
+		
 		// exit(0);
 		// break;
 	}
+	
 	int TC; re(TC);
 	FOR(i,1,TC+1) solve(i);
 	dbg_time();
